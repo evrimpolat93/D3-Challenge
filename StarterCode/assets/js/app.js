@@ -17,7 +17,7 @@ var svg = d3.select("#scatter").append("svg").attr("width", svgWidth)
 // create varible to hold svg elements
 const chartGroup = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`)
 
-// defulat values for x and y axises 
+// default values for x and y axises 
 var xkey = "poverty";
 var ykey = "healthcare";
 
@@ -92,7 +92,7 @@ function yRenderTextCircle(textGroup, yNewScale, ykey) {
     return textGroup
 }
 
-// tooltip function to update citcle group with new one
+// tooltip function to update circle group with new one
 function xUpdateToolTip(xkey, circleGroup) {
 
 
@@ -217,9 +217,6 @@ d3.csv("assets/data/data.csv").then(function (journalData) {
     // create group for y axis  labels 
     var yLabelsGroup = chartGroup.append("g")
         .attr("transform", `translate(${(chartHeight / 2)}, ${0 - margin.left})`)
-        // .attr("x", 0 - (chartHeight / 2))
-        // .attr("y", 0 - margin.left +20)
-
         .attr("transform", "rotate(-90)")
 
 
