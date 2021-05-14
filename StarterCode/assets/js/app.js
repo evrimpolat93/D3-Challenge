@@ -33,3 +33,33 @@ function xAxisScale(journalData, xkey) {
 
 }
 
+// function to put ticks values in y axis with the name of database 
+function yAxisScale(journalData, ykey) {
+    yScale = d3.scaleLinear()
+        .domain([d3.min(journalData, d => d[ykey]) * 0.8,
+        d3.max(journalData, d => d[ykey]) * 1.2])
+        .range([chartHeight, 0])
+    return yScale
+}
+
+// to locate ticks for x axis in bottom
+function xRenderAxes(xNewScale, xAxis) {
+    var bottomAxis = d3.axisBottom(xNewScale);
+
+    xAxis.transition()
+        .duration(1000)
+        .call(bottomAxis);
+
+    return xAxis;
+
+// to locate ticks for y axis in left
+function yRenderAxes(yNewScale, yAxis) {
+    var leftAxis = d3.axisLeft(yNewScale);
+
+    yAxis.transition()
+        .duration(1000)
+        .call(leftAxis);
+
+    return yAxis;
+}
+
