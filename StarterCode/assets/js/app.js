@@ -261,8 +261,6 @@ d3.csv("assets/data/data.csv").then(function (journalData) {
                 // replaces chosenXAxis with value
                 xkey = value;
 
-                // console.log(chosenXAxis)
-
                 // functions here found above csv import
                 // updates x scale for new data
                 xLinearScale = xAxisScale(journalData, xkey)
@@ -327,8 +325,6 @@ d3.csv("assets/data/data.csv").then(function (journalData) {
 
                 // replaces chosenXAxis with value
                 ykey = value;
-
-                // console.log(chosenXAxis)
 
                 // functions here found above csv import
                 // updates x scale for new data
