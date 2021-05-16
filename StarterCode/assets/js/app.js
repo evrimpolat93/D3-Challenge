@@ -157,7 +157,7 @@ d3.csv("assets/data/data.csv").then(function (journalData) {
 
 
     })
-    // return value in varible name 
+    // return value in variable name 
     var xLinear = xAxisScale(journalData, xkey)
     var yLinear = yAxisScale(journalData, ykey)
 
@@ -240,7 +240,6 @@ d3.csv("assets/data/data.csv").then(function (journalData) {
         .attr("class", "inactive")
         .attr("value", "obesity")
         .text("Obese %");
-
 
 
     // updateToolTip function above csv import
@@ -387,15 +386,6 @@ d3.csv("assets/data/data.csv").then(function (journalData) {
 
 }).catch(function (error) {
     console.log(error);
-
-
-
-
-
-
-
-
-
 
 
 })
